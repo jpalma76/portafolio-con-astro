@@ -17,14 +17,20 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="w-auto text-white mx-16 md:mx-32">
+		<div class="w-[100%] text-white">
 			<slot />
 		</div>
 	</body>
 </html>
 <style is:global>
+	* {
+		margin:0;
+		padding: 0;
+		box-sizing: border-box;
+	}
 	html {
 		font-family: 'Jost Variable', system-ui, sans-serif;
 		background: #444;
+		width:100%;
 	}
 </style>
